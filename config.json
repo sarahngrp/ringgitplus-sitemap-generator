@@ -1,0 +1,96 @@
+{
+  "baseUrl": "https://ringgitplus.com",
+  "algolia": {
+    "productsIndex": "productsListing",
+    "landingPagesIndex": "landingPages_auto",
+    "guideCategoriesIndex": "guideCategories_auto"
+  },
+  "wordpress": {
+    "baseUrl": "https://ringgitplus.wpcomstaging.com",
+    "stagingDomain": "ringgitplus.wpcomstaging.com",
+    "productionDomain": "ringgitplus.com",
+    "postsPerPage": 100
+  },
+  "s3": {
+    "liveKey": "sitemap-generated.xml",
+    "historyPrefix": "sitemap-history/",
+    "contentType": "application/xml; charset=utf-8",
+    "historyRetentionDays": 30
+  },
+  "git": {
+    "repo": "AfinityGroup/ringgitplus4",
+    "branch": "stable",
+    "routesPath": "routes/pages"
+  },
+  "validation": {
+    "httpConcurrency": 20,
+    "httpTimeoutMs": 10000,
+    "excludePatterns": [
+      "/tag/",
+      "/author/",
+      "/page/\\d+/"
+    ]
+  },
+  "safety": {
+    "thresholdPercent": 2
+  },
+  "categorySlugMap": {
+    "crcd": "credit-card",
+    "decd": "debit-card",
+    "peln": "personal-loan",
+    "cuat": "current-account",
+    "pefd": "fixed-deposit",
+    "homg": "home-loan",
+    "saat": "savings-account",
+    "buln": "business-loan",
+    "mvin": "car-insurance",
+    "hoin": "home-insurance",
+    "mdin": "health-insurance/medical-card",
+    "cril": "health-insurance/critical-illness",
+    "mvfn": "car-loan",
+    "tvin": "travel-insurance",
+    "term": "term-life-insurance",
+    "bt": "balance-transfer",
+    "epp": "easy-payment-plan",
+    "wlin": "whole-life-insurance",
+    "wmgmt": "wealth-management",
+    "pein": "personal-accident-insurance",
+    "dpp": "buy-now-pay-later",
+    "ewt": "e-wallet",
+    "ostdng": "online-share-trading",
+    "hbbd": "internet/home-broadband"
+  },
+  "excludedVerticals": ["mobile-plan", "mobile-broadband"],
+  "staticPages": [
+    "/en/",
+    "/en/about-us/",
+    "/en/contact-us/",
+    "/en/privacy-policy/",
+    "/en/terms-and-conditions/",
+    "/en/credit-card/",
+    "/en/personal-loan/",
+    "/en/home-loan/",
+    "/en/car-loan/",
+    "/en/savings-account/",
+    "/en/fixed-deposit/",
+    "/en/current-account/",
+    "/en/debit-card/",
+    "/en/car-insurance/",
+    "/en/home-insurance/",
+    "/en/health-insurance/medical-card/",
+    "/en/health-insurance/critical-illness/",
+    "/en/travel-insurance/",
+    "/en/term-life-insurance/",
+    "/en/whole-life-insurance/",
+    "/en/personal-accident-insurance/",
+    "/en/balance-transfer/",
+    "/en/easy-payment-plan/",
+    "/en/business-loan/",
+    "/en/wealth-management/",
+    "/en/buy-now-pay-later/",
+    "/en/e-wallet/",
+    "/en/online-share-trading/",
+    "/en/internet/home-broadband/",
+    "/en/blog/"
+  ]
+}

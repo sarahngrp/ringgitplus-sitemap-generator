@@ -1,0 +1,21 @@
+{
+  "name": "ringgitplus-sitemap-generator",
+  "version": "1.0.0",
+  "description": "Nightly sitemap generator for RinggitPlus EN — pulls URLs from Algolia, WordPress, and route files",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dry-run": "node index.js --dry-run --output ./test-sitemap.xml"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "algoliasearch": "^3.35.1",
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
+    "p-limit": "^3.1.0"
+  }
+}
