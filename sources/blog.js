@@ -6,10 +6,17 @@ const axios = require('axios');
  * Rewrite WordPress staging domain to production.
  */
 function rewriteDomain(url, config) {
-  return url.replace(
+  let rewritten = url.replace(
     new RegExp(`https?://${config.wordpress.stagingDomain}`, 'g'),
     `https://${config.wordpress.productionDomain}`
   );
+  // WordPress returns category links with "./" — normalize path
+  rewritten = rewritten.replace(/\/\.\//g, '/');
+  // Ensure trailing slash
+  if (!rewritten.endsWith('/') && !rewritten.match(/\.\w+$/)) {
+    rewritten += '/';
+  }
+  return rewritten;
 }
 
 /**
